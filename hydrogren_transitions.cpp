@@ -45,8 +45,8 @@ int main() {
 
     // Calculate the energy
     double E = -energy(Z, nj, ni); // Flip the sign for photon energy
-    double E_initial = energyLevel(Z, nj); // initial energy
-    double E_final = energyLevel(Z, ni); // final energy
+    double E_initial = energyLevel(Z, nj);
+    double E_final = energyLevel(Z, ni); 
 
     // Output the energy
     if (unit == 'j' || unit == 'J') {
