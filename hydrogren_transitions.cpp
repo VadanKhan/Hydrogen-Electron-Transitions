@@ -1,6 +1,6 @@
 /*
 ________________TITLE________________
-PHYS20161 - Assignment 1 - Hydrogen Transitions
+PHYS30762 - Assignment 1 - Hydrogen Transitions
 -------------------------------------
 This script performs calculates the energy of emitted photons, if a hydrogen
 atom decays from a certain principal quantum number (nj) to a lower one (ni).
@@ -28,7 +28,7 @@ the input is invalid.)
 3) User will be asked if a new calculation is required.
 
 Last Updated: 01/02/2024
-@author: Vadan Khan UID: 10823198
+@author: UID: 10823198
 
 */
 
@@ -42,13 +42,13 @@ const double E_r{13.605693122994}; // Rydberg constant for hydrogen in eV.s
 const double e{1.602176634e-19};   // Elementary Charge in C.s
 const int PRECISION{6};            // Set precision of output
 
-double energy(int &Z, int &nj, int &ni) {
+double energy(int& Z, int& nj, int& ni) {
   // Calculate the energy of the transition
   double E = Z * Z * E_r * (1.0 / (nj * nj) - 1.0 / (ni * ni));
   return E;
 }
 
-double energyLevel(int &Z, int &n) {
+double energyLevel(int& Z, int& n) {
   // Calculate the energy of a specific level
   double E = -Z * Z * E_r / (n * n);
   return E;
