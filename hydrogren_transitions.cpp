@@ -40,14 +40,14 @@ Last Updated: 01/02/2024
 const double E_r{13.605693122994}; // Rydberg constant for hydrogen in eV.s
 const double e{1.602176634e-19}; // Elementary Charge in C.s
 
-double energy(int Z, int nj, int ni) 
+double energy(int& Z, int& nj, int& ni) 
 {
   // Calculate the energy of the transition
   double E = Z * Z * E_r * (1.0 / (nj * nj) - 1.0 / (ni * ni));
   return E;
 }
 
-double energyLevel(int Z, int n) 
+double energyLevel(int& Z, int& n) 
 {
   // Calculate the energy of a specific level
   double E = -Z * Z * E_r / (n * n);
